@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.btn-container {
+  display: flex;
+  gap: 10px;
+}
+.btn-container .btn {
+  background-color: violet;
+  font-size: 17px;
+  height: 26px;
+  width: 50px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.body {
+  background-color: darkgrey;
+  height: 400px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  gap: 40px;
+}
+.display {
+  height: 50px;
+  font-size: 40px;
+  width: 300px;
+  background-color: aliceblue;
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  overflow: hidden;
+  white-space: nonwarp;
+}
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  gap: 15px;
+  justify-content: center;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(55, 55, 55);
+
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+.btn:hover {
+  background-color: rgb(120, 120, 120);
+  cursor: pointer;
+}
