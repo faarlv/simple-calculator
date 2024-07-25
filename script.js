@@ -16,7 +16,6 @@ buttons.forEach((button) => {
       console.log(numGate, mathGate);
       display.textContent = expression;
     } else if (btnValue === "=") {
-      let opp;
       let operation = expression.split(/([+\-*/])/);
       let first = Number(operation[0]);
       let second = Number(operation[2]);
@@ -24,14 +23,31 @@ buttons.forEach((button) => {
       if (operation[1] === "+") {
         result = first + second;
       } else if (operation[1] === "-") {
-        result = first + second;
+        result = first - second;
       } else if (operation[1] === "*") {
-        result = first + second;
+        result = first * second;
       } else if (operation[1] === "/") {
-        result = first + second;
+        result = first / second;
       }
+      expression = result.toString();
+      let moreDecimal = "";
 
-      display.textContent = result;
+      if (expression.includes(".")) {
+        moreDecimal = expression.split(".")[1];
+        console.log(expression);
+
+        if (moreDecimal.length > 3) {
+          expression = result.toFixed(3);
+          console.log(expression);
+        }
+      }
+      console.log(expression);
+
+      display.textContent = expression;
+
+      mathGate = true;
+      numGate = true;
+      pointGate = false;
     } else if (btnValue === ".") {
       if (pointGate === false && numGate === true) {
         expression += btnValue;
